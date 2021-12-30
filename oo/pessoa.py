@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos = 2  # atributo de classe
+
     def __init__(self, *filhos, nome=None, idade=47):
         self.nome = nome
         self.idade = idade
@@ -16,3 +18,6 @@ if __name__ == '__main__':
     print(alan.idade)
     for filho in alan.filhos:
         print(filho.nome)
+
+    print(alan.__dict__)  # mantém apenas os atributos de instância
+    print(abner.__dict__)
